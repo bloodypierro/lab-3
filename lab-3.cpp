@@ -9,15 +9,15 @@ int main()
 {
     // Пункт 1
     int amount;
-    cout << "Количество чисел: ";
-    cin >> amount;
+    cout << "Количествое чисел: "; //1) последовательность целочисленных чисел, ввод с  клавиатуры 
+    cin >> amount;     //1)
 
     int sum = 0, count = 0, maxNeg = -9999999;
     bool found = false;
 
-    cout << "Введите " << amount << " чисел: "; 
+    cout << "Введите " << amount << " числа: ";
 
-    for (int i = 0; i < amount; i++) {
+    for (int i = 0; i < amount; i++) { // последовательность 1)
         int num;
         cin >> num;
 
@@ -34,35 +34,33 @@ int main()
         }
     }
 
-    if (!found) {
+    if (!found) { // если нету отриц чисел
         cout << "Нет отрицательных чисел" << endl;
     }
     else {
-        cout << "Сумма отрицательных: " << sum << endl;
-        cout << "Наибольшее отрицательное: " << maxNeg << endl;
-        cout << "Его количество: " << count << endl;
+        cout << "Сумма отрицательных:" << sum << endl;
+        cout << "Наибольшее отрицательное:" << maxNeg << endl;
+        cout << "Его количество:" << count << endl;
     }
 
     // Пункт 2
-    int x;
-    cout << "Введите X (|X| < 1000): ";  
-    cin >> x;
+    int x; // ПУНКТ 2 ВВОДИМ X 
 
+    cin >> x; // для проверки  целочислленности
+    
     if (x >= -999 && x <= 999) {
-        if (x < 0) x = -x;
+        if (x < 0) x = -x; // убираю минус если есть
 
-        int a = x / 100;
-        int b = (x / 10) % 10;
-        int c = x % 10;
+        int a = x / 100; // 1 первая
+        int b = (x / 10) % 10; // средняя
+        int c = x % 10; // последняя
 
         int max = a;
         if (b > max) max = b;
         if (c > max) max = c;
 
-        cout << "Самая большая цифра: " << max << endl;  
+        cout << "Сама большая цифра:" << max << endl;
     }
-    else {
-        cout << "Ошибка: |X| должен быть меньше 1000" << endl;
-    }
+
     return 0;
 }
