@@ -25,7 +25,7 @@ for (int i = 0; i < amount; i++) {
             count = 1;
         } else {
            
-            if (num > maxNeg) {   // Сравниваем с текущим максимумом
+            if (num > maxNeg) {   
                 maxNeg = num;
                 count = 1;
             }
