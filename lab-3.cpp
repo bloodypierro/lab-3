@@ -15,7 +15,7 @@ int main()
     int sum = 0, count = 0, maxNeg = -9999999;
     bool found = false;
 
-    cout << "Введите " << amount << " числа: ";
+    cout << "Введите " << amount << " числел: ";
 
     for (int i = 0; i < amount; i++) { // последовательность 1)
         int num;
@@ -60,7 +60,7 @@ int main()
        }
        t = t / 10; // удаляем последнюю цифру
        }
-        cout << "Самая большая цифра:" << maxnumeral << endl;
+        cout << "Наибольшая цифра:" << maxnumeral << endl;
     }
 
     return 0;
