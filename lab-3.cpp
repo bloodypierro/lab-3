@@ -7,9 +7,9 @@ using namespace std;
 
 int main()
 {
-    // Пункт 1
+    // Пункт 1 
     int amount;
-    cout << "Количествое чисел: "; //1) последовательность целочисленных чисел, ввод с  клавиатуры 
+    cout << "Количество чисел: "; //1) последовательность целочисленных чисел, ввод с  клавиатуры 
     cin >> amount;     //1)
 
     int sum = 0, count = 0, maxNeg = -9999999;
@@ -25,7 +25,7 @@ int main()
             found = true;
             sum += num;
             if (num > maxNeg) {
-                maxNeg = num;
+                maxNeg = num; //  первое отрицательное
                 count = 1;
             }
             else if (num == maxNeg) {
@@ -51,15 +51,16 @@ int main()
     if (x >= -999 && x <= 999) {
         if (x < 0) x = -x; // убираю минус если есть
 
-        int a = x / 100; // 1 первая
-        int b = (x / 10) % 10; // средняя
-        int c = x % 10; // последняя
-
-        int max = a;
-        if (b > max) max = b;
-        if (c > max) max = c;
-
-        cout << "Сама большая цифра:" << max << endl;
+       int t = x; // t переменная для работы с числом
+       int maxnumeral = 0;
+       while (t > 0){
+       int numeral = t % 10; // получаем последнюю цирфу
+       if (numeral > maxnumeral){
+       maxnumeral = numeral;
+       }
+       t = t / 10; // удаляем последнюю цифру
+       }
+        cout << "Самая большая цифра:" << maxnumeral << endl;
     }
 
     return 0;
