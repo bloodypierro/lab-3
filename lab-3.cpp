@@ -15,7 +15,7 @@ int main()
     int sum = 0, count = 0, maxNeg = -9999999;
     bool found = false;
 
-    cout << "Введите " << amount << " числел: ";
+    cout << "Введите " << amount << " чисел: ";
 
     for (int i = 0; i < amount; i++) { // последовательность 1)
         int num;
